@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MoisalexWeb</title>
+	<link rel="shortcut icon" href="./img/favicon-si.png" type="image/x-icon">
+	<!-- Swiper JS -->
+	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+	<!-- Normalize -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- My styles -->
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+	<header class="header">
+		<nav class="nav">
+			<h2 class="nav-logo">MoisalexWeb</h2>
+
+			<div class="nav__menu" id="menu">
+				<ul class="nav__list">
+					<li>
+						<a href="#home" class="nav__link" data-section="links" data-value="home">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<g>
+									<path fill="none" d="M0 0h24v24H0z"/>
+									<path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"/>
+								</g>
+							</svg>
+							Inicio
+						</a>
+					</li>
+
+					<li>
+						<a href="#skills" class="nav__link" data-section="links" data-value="skills">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<g>
+									<path fill="none" d="M0 0h24v24H0z"/>
+									<path d="M13 16.938V19h5v2H6v-2h5v-2.062A8.001 8.001 0 0 1 4 9V3h16v6a8.001 8.001 0 0 1-7 7.938zM6 5v4a6 6 0 1 0 12 0V5H6zM1 5h2v4H1V5zm20 0h2v4h-2V5z"/>
+								</g>
+							</svg>
+							Habilidades
+						</a>
+					</li>
+
+					<li>
+						<a href="#education" class="nav__link" data-section="links" data-value="education">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<g>
+									<path fill="none" d="M0 0h24v24H0z"/>
+									<path d="M13 21v2h-2v-2H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6a3.99 3.99 0 0 1 3 1.354A3.99 3.99 0 0 1 15 3h6a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-8zm7-2V5h-5a2 2 0 0 0-2 2v12h7zm-9 0V7a2 2 0 0 0-2-2H4v14h7z"/>
+								</g>
+							</svg>
+							Educación
+						</a>
+					</li>
+
+					<li>
+						<a href="#projects" class="nav__link" data-section="links" data-value="projects">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<g>
+									<path fill="none" d="M0 0h24v24H0z"/>
+									<path d="M7 5V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4zM4 16v3h16v-3H4zm0-2h16V7H4v7zM9 3v2h6V3H9zm2 8h2v2h-2v-2z"/>
+								</g>
+							</svg>
+							Proyectos
+						</a>
+					</li>
+
+					<li>
+						<a href="#contact" class="nav__link" data-section="links" data-value="contact">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<g>
+									<path fill="none" d="M0 0h24v24H0z"/>
+									<path d="M7.291 20.824L2 22l1.176-5.291A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.956 9.956 0 0 1-4.709-1.176zm.29-2.113l.653.35A7.955 7.955 0 0 0 12 20a8 8 0 1 0-8-8c0 1.334.325 2.618.94 3.766l.349.653-.655 2.947 2.947-.655z"/>
+								</g>
+							</svg>
+							Contacto
+						</a>
+					</li>
+				</ul>
+
+				<button class="nav__close" id="close-menu" aria-label="Cerrar menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g>
+							<path fill="none" d="M0 0h24v24H0z"/>
+							<path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/>
+						</g>
+					</svg>
+				</button>
+			</div>
+
+			<div class="nav__buttons">
+				<button class="button-theme" id="change-theme" aria-label="Cambiar tema oscuro/claro">
+					<img src="img/moon.svg" alt="Moon">
+				</button>
+				<button class="button-language" id="change-language" aria-label="Cambiar idioma">
+					<img src="img/flag-gb.svg" alt="Ingles" aria-hidden="true">
+				</button>
+				<button class="button-menu" aria-label="Abrir menú" id="hamburger-button">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g>
+							<path fill="none" d="M0 0h24v24H0z"/>
+							<path d="M18 18v2H6v-2h12zm3-7v2H3v-2h18zm-3-7v2H6V4h12z"/>
+						</g>
+					</svg>
+				</button>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home" class="container home">
+			<div class="home__main">
+				<h1 class="home-title" data-section="home" data-value="home-title">
+					Soy Moises Caraballo<br>
+					Desarrollador Fronted<br>
+					Localizado en Venezuela<br>
+				</h1>
+
+				<figure class="home__perfil">
+					<img src="./img/perfil.png" alt="Moises Caraballo" class="home__perfil-img">
+				</figure>
+
+				<a href="./MoisalexWeb-CV.pdf" download class="home-download" data-section="home" data-value="cv-text">Descargar CV</a>
+			</div>
+
+			<div class="home__info one">
+				<div>
+					<h3 class="home__info-title" data-section="home" data-value="about-title">Sobre mí</h3>
+					<p class="home__info-description" data-section="home" data-value="about-description">
+						Hola, soy Moises Caraballo Técnico Superior Universitario
+						en Informática, profesional apasionado en el Desarrollo Fronted.
+						Me gusta aprender cosas nuevas en especial el idioma inglés, 
+						en el cual mi nivel actual es A2.
+					</p>
+				</div>
+				<div>
+					<h3 class="home__info-title" data-section="home" data-value="contact-title">Contacto</h3>
+					<p class="home__info-description" data-section="home" data-value="contact-description">
+						Venezuela, El Tigre<br>
+						moises.08.caraballo@gmail.com
+					</p>
+				</div>
+			</div>
+
+			<div class="home__info two">
+				<div>
+					<h3 class="home__info-title" data-section="home" data-value="projects-title">Proyectos completados</h3>
+					<p class="home__info-number" data-section="home" data-value="projects-number">10+</p>
+				</div>
+				<div>
+					<h3 class="home__info-title" data-section="home" data-value="experience-title">Años de experiencia</h3>
+					<p class="home__info-number" data-section="home" data-value="experience-number">1+</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills" class="container">
+			<h2 class="title" data-section="skills" data-value="title">Mis Habilidades</h2>
+
+			<div class="skills__cards">
+				<div class="skills__card">
+					<figure class="skills__figure">
+						<img src="./img/html.svg" alt="HTML5">
+					</figure>
+					<h3 class="skills-title" data-section="skills" data-value="card-title-1">HTML</h3>
+					<p class="skills-subtitle" data-section="skills" data-value="card-description-1">Intermedio</p>
+				</div>
+
+				<div class="skills__card">
+					<figure class="skills__figure">
+						<img src="./img/css.svg" alt="CSS3">
+					</figure>
+					<h3 class="skills-title" data-section="skills" data-value="card-title-2">CSS</h3>
+					<p class="skills-subtitle" data-section="skills" data-value="card-description-2">Avanzado</p>
+				</div>
+
+				<div class="skills__card">
+					<figure class="skills__figure">
+						<img src="./img/javascript.svg" alt="JavaScript">
+					</figure>
+					<h3 class="skills-title" data-section="skills" data-value="card-title-3">JavaScript</h3>
+					<p class="skills-subtitle" data-section="skills" data-value="card-description-3">Intermedio</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="education" class="container">
+			<h2 class="title" data-section="education" data-value="title">Mi Educación</h2>
+
+			<div class="education__container">
+				<div class="education__item">
+					<h3 class="education-title" data-section="education" data-value="card-title-1">Técnico Superior Universitario en Informática</h3>
+					<p class="education-place" data-section="education" data-value="card-description-1">Universidad Politécnica Territorial José Antonio Anzoátegui - Venezuela</p>
+					<p class="education-year" data-section="education" data-value="card-year-1">2019 - 2022</p>
+				</div>
+
+				<div class="education__item">
+					<h3 class="education-title" data-section="education" data-value="card-title-2">Universidad Desarrollo Web - Fronted Web Developer</h3>
+					<p class="education-place" data-section="education" data-value="card-description-2">Udemy Inc. - Global Mentoring, Ingeniero Ubaldo Acosta</p>
+					<p class="education-year" data-section="education" data-value="card-year-2">2022 (30 horas de duración)</p>
+				</div>
+
+				<div class="education__item">
+					<h3 class="education-title" data-section="education" data-value="card-title-3">Interchange A2 Book (Inglés)</h3>
+					<p class="education-place" data-section="education" data-value="card-description-3">Smart People Gropu Academy - Venezuela</p>
+					<p class="education-year" data-section="education" data-value="card-year-3">2022 (72 horas de duración)</p>
+				</div>
+
+				<div class="education__item">
+					<h3 class="education-title" data-section="education" data-value="card-title-4">Ingeniero en Informática</h3>
+					<p class="education-place" data-section="education" data-value="card-description-4">Universidad Politécnica Territorial José Antonio Anzoátegui - Venezuela</p>
+					<p class="education-year" data-section="education" data-value="card-year-4">2022 - Ahora (Cursando actualmente)</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="projects" class="container">
+			<h2 class="title" data-section="projects" data-value="title">Mis Proyectos</h2>
+
+			<div class="projects__container swiper">
+				<div class="swiper-wrapper">
+					<!-- Project 1 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-7.jpg" alt="Proyecto 7" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-1">Bookmark</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/bookmark-landing-page" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 2 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-2.jpg" alt="Proyecto 2" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-2">Ecommerce product page</h3>
+							<p class="projects-subtitle" data-section="projects" data-value="project-description-2">Carrito de compras con JavaScript</p>
+							<a href="https://moisalexweb.github.io/shopping-cart-using-javascript" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 3 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-3.jpg" alt="Proyecto 3" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-3">News homepage</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/news-homepage" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 4 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-4.jpg" alt="Proyecto 4" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-4">Room homepage</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/Room-homepage" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 5 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-5.jpg" alt="Proyecto 5" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-5">Sunnyside Agency</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/Sunnyside-agency-landing-page" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 6 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-6.jpg" alt="Proyecto 6" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-6">Blogr</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/blogr-landing-page" class="projects-link" target="_blank" rel="noopener"data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 7 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-1.jpg" alt="Proyecto 1" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-7">Loopstudios</h3>
+							<p class="projects-subtitle">Landing page</p>
+							<a href="https://moisalexweb.github.io/loopstudiosLandingPage" class="projects-link" target="_blank" rel="noopener" data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+
+					<!-- Project 8 -->
+					<div class="projects__content swiper-slide">
+						<figure class="projects__figure">
+							<img src="./img/project-8.jpg" alt="Proyecto 8" class="projects-img">
+						</figure>
+						<div>
+							<h3 class="projects-title" data-section="projects" data-value="project-title-8">Todo App</h3>
+							<p class="projects-subtitle" data-section="projects" data-value="project-description-8">Lista de tareas que hacer con JavaScript</p>
+							<a href="https://moisalexweb.github.io/todo-app" class="projects-link" target="_blank" rel="noopener" data-section="projects" data-value="project-link">Ver sitio</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Swiper arrows -->
+				<button class="swiper-button-next">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g>
+							<path fill="none" d="M0 0h24v24H0z"/>
+							<path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/>
+						</g>
+					</svg>
+				</button>
+				<button class="swiper-button-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g>
+							<path fill="none" d="M0 0h24v24H0z"/>
+							<path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"/>
+						</g>
+					</svg>
+				</button>
+
+				<!-- Swiper pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<section id="contact" class="container">
+			<h2 class="title" data-section="contact" data-value="title">Contáctame Ahora</h2>
+			<span class="contact-subtitle" data-section="contact" data-value="subtitle">Cuéntame tu proyecto</span>
+
+			<div class="contact__container">
+				<form class="contact__form" id="contact-form">
+					<div class="form__group">
+						<input type="text" class="form-input" name="name" id="name" placeholder=" ">
+						<label for="name" class="form-label" data-section="contact" data-value="form-name">Nombre:</label>
+					</div>
+					<p class="error-field name"></p>
+
+					<div class="form__group">
+						<input type="text" class="form-input" name="lastname" id="lastname" placeholder=" " minlength="3" maxlength="20">
+						<label for="lastname" class="form-label" data-section="contact" data-value="form-lastname">Apellido:</label>
+					</div>
+					<p class="error-field lastname"></p>
+
+					<div class="form__group">
+						<input type="email" class="form-input" name="email" id="email" placeholder=" " maxlength="30">
+						<label for="email" class="form-label" data-section="contact" data-value="form-email">Correo:</label>
+					</div>
+					<p class="error-field email"></p>
+
+					<div class="form__group">
+						<input type="text" class="form-input" name="subject" id="subject" placeholder=" " maxlength="40">
+						<label for="subject" class="form-label" data-section="contact" data-value="form-subject">Asunto:</label>
+					</div>
+					<p class="error-field subject"></p>
+
+					<div class="form__group message">
+						<textarea name="message" id="message" class="form-input message" placeholder=" " maxlength="350"></textarea>
+						<label for="message" class="form-label" data-section="contact" data-value="form-message">Mensaje:</label>
+						<span class="message-characters">350</span>
+					</div>
+					<p class="error-field message"></p>
+
+					<div>
+						<input type="submit" value="Enviar" class="form-submit" data-section="contact" data-value="form-button" data-submit>
+					</div>
+
+					<div class="form__loader">
+						<img src="img/oval.svg" alt=" " aria-hidden="true" class="loader-img d-none">
+						<p class="loader-response d-none"></p>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- Scroll Button -->
+		<a href="#home" aria-label="Ir al inicio" class="scroll-button" id="scroll-button">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<g>
+					<path fill="none" d="M0 0h24v24H0z"/>
+					<path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z"/>
+				</g>
+			</svg>
+		</a>
+	</main>
+
+	<footer class="container footer__container">
+		<div class="footer__brand">
+			<h2 class="title">MoisalexWeb</h2>
+			<img src="./img/logo-favicon.png" alt="MoisalexWeb logo" class="footer-logo">
+		</div>
+		<p class="footer-profession" data-section="footer" data-value="profession">Desarrollador Fronted</p>
+
+		<div class="footer__nav">
+			<a href="#home" class="footer-link" data-section="footer" data-value="link-home">Inicio</a>
+			<a href="#skills" class="footer-link" data-section="footer" data-value="link-skill">Habilidades</a>
+			<a href="#projects" class="footer-link" data-section="footer" data-value="link-project">Proyectos</a>
+		</div>
+
+		<div class="footer__social">
+			<a href="https://api.whatsapp.com/send?phone=584248733236" rel="noopener" target="_blank" class="footer__social-link" aria-label="Escríbeme por WhatsApp">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g>
+						<path fill="none" d="M0 0h24v24H0z"/>
+						<path fill-rule="nonzero" d="M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"/>
+					</g>
+				</svg>
+			</a>
+
+			<a href="https://github.com/MoisalexWeb" rel="noopener" target="_blank" class="footer__social-link" aria-label="Visita mi cuenta de GitHub">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g>
+						<path fill="none" d="M0 0h24v24H0z"/>
+						<path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/>
+					</g>
+				</svg>
+			</a>
+
+			<a href="https://instagram.com/Moisalex_sw" rel="noopener" target="_blank" class="footer__social-link" aria-label="Visita mi cuenta de Instagram">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g>
+						<path fill="none" d="M0 0h24v24H0z"/>
+						<path fill-rule="nonzero" d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+					</g>
+				</svg>
+			</a>
+
+			<a href="https://t.me/Moysalex" target="_blank" rel="noopener" aria-label="Escríbeme por Telegram" class="footer__social-link">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g>
+						<path fill="none" d="M0 0h24v24H0z"/>
+						<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l.013-.007.87 2.87c.112.311.266.367.453.341.188-.025.287-.126.41-.244l1.188-1.148 2.55 1.888c.466.257.801.124.917-.432l1.657-7.822c.183-.728-.137-1.02-.702-.788l-9.733 3.76c-.664.266-.66.638-.12.803l2.497.78z"/>
+					</g>
+				</svg>
+			</a>
+		</div>
+	</footer>
+
+	<template id="template-modal">
+		<div class="modal__container show-modal">
+			<div class="modal__content">
+				<div class="modal__header">
+					<figure class="modal-figure">
+						<img src="img/logo-favicon.png" alt="MoisalexWeb" class="modal-img">
+					</figure>
+					<button class="modal-close" aria-label="Cerrar modal">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							<g>
+								<path fill="none" d="M0 0h24v24H0z"/>
+								<path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"/>
+							</g>
+						</svg>
+					</button>
+				</div>
+				<p class="modal-paragraph"></p>
+			</div>
+		</div>
+	</template>
+	
+	<!-- Swiper JS -->
+	<script type="text/javascript" src="./js/swiper-bundle.min.js"></script>
+
+	<!-- Main -->
+	<script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/contact.js"></script>
+	<script type="text/javascript" src="./js/change-language.js"></script>
+	
+</body>
+</html>
