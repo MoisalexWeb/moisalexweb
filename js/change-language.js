@@ -17,7 +17,7 @@ const preloadImage = url => new Image().src = url;
 // Change language
 const changeLanguage = async language => {
 	try {
-		const requestJson = await fetch(`../languages/${language}.json`)
+		const requestJson = await fetch(`https://moisalexweb.github.io/moisalexweb/languages/${language}.json`)
         const texts = await requestJson.json()
 
         textsToChange.forEach(textToChange => {
